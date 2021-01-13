@@ -11,7 +11,7 @@
 7. for laravel 8 -> uncomment code -> protected $namespace = 'App\\Http\\Controllers'; in RouteServiceProvider.php 
 8. to start laravel development environment->command-> php artisan serve
 
-datatable using yajra:
+datatables using yajra:
 a)to install yajra package->command-> composer require yajra/laravel-datatables-oracle
 b)go to config/app.php 
   add code->Yajra\Datatables\DatatablesServiceProvider::class, in 'providers' array
