@@ -10,3 +10,6 @@
    Route::get('view_file_name', 'App\Http\Controllers\Controller_name@index')->name('view_file_name'); --> if used, step 7 not required  
 7. for laravel 8 -> uncomment code -> protected $namespace = 'App\\Http\\Controllers'; in RouteServiceProvider.php 
 8. to start laravel development environment->command-> php artisan serve
+
+to install yajra package->command-> composer require yajra/laravel-datatables-oracle
+ 
