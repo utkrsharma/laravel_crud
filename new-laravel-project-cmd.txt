@@ -7,6 +7,6 @@
    write following code->
    Route::resource('crud', 'CrudController');->this is single route declaration which creates multiple routes to handle a variety of restful actions on 'crud'(crud folder in resources/views) resource
    OR
-   Route::get('view_file_name', 'Controller_name@index'); --> if used, step 7 not required  
+   Route::get('view_file_name', 'Controller_name@index')->name('view_file_name'); --> if used, step 7 not required  
 7. for laravel 8 -> uncomment code -> protected $namespace = 'App\\Http\\Controllers'; in RouteServiceProvider.php 
 8. to start laravel development environment->command-> php artisan serve
