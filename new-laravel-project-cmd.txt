@@ -1,0 +1,10 @@
+1. to create new project->command-> composer create-project --prefer-dist laravel/laravel folder_name
+2. Database connection -> in .env file(at root) and database.php(in config folder) file
+3. to create new model and migration->command-> php artisan make:model model_name -m
+4. to migrate to phpmyadmin->command-> php artisan migrate
+5. to create new controller->command-> php artisan make:controller CrudController --resource
+6. go to routes/web.php->
+   write following code->
+   Route::resource('crud', 'CrudController');->this is single route declaration which creates multiple routes to handle a variety of restful actions on 'crud'(crud folder in resources/views) resource
+7. for laravel 8 -> uncomment code -> protected $namespace = 'App\\Http\\Controllers'; in RouteServiceProvider.php 
+8. to start laravel development environment->command-> php artisan serve
