@@ -18,3 +18,10 @@ b)go to config/app.php
   add code->'DataTables' => Yajra\DataTables\Facades\DataTables::class, in 'aliases' array
 c)to publish vendor->command-> php artisan vendor:publish
   then select vendor to publish
+
+to create dummy entries in database:
+create new factory in databse/factories
+commands->composer dump-autoload
+          php artisan tinker
+                            >>>Class_name::factory()->count(500)->create()
+                            this will insert 500 dummy entries into datatbse
