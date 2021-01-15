@@ -1,0 +1,27 @@
+1. to create new project->command-> composer create-project --prefer-dist laravel/laravel folder_name
+2. Database connection -> in .env file(at root) and database.php(in config folder) file
+3. to create new model and migration->command-> php artisan make:model model_name -m
+4. to migrate to phpmyadmin->command-> php artisan migrate
+5. to create new controller->command-> php artisan make:controller CrudController --resource
+6. go to routes/web.php->
+   write following code->
+   Route::resource('crud', 'CrudController');->this is single route declaration which creates multiple routes to handle a variety of restful actions on 'crud'(crud folder in resources/views) resource
+   OR
+   Route::get('view_file_name', 'App\Http\Controllers\Controller_name@index')->name('view_file_name'); --> if used, step 7 not required  
+7. for laravel 8 -> uncomment code -> protected $namespace = 'App\\Http\\Controllers'; in RouteServiceProvider.php 
+8. to start laravel development environment->command-> php artisan serve
+
+datatables using yajra:
+a)to install yajra package->command-> composer require yajra/laravel-datatables-oracle
+b)go to config/app.php 
+  add code->Yajra\Datatables\DatatablesServiceProvider::class, in 'providers' array
+  add code->'DataTables' => Yajra\DataTables\Facades\DataTables::class, in 'aliases' array
+c)to publish vendor->command-> php artisan vendor:publish
+  then select vendor to publish
+
+to create dummy entries in database:
+create new factory in databse/factories
+commands->composer dump-autoload
+          php artisan tinker
+                            >>>Class_name::factory()->count(500)->create()
+                            this will insert 500 dummy entries into database
