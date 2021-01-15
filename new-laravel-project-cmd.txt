@@ -24,4 +24,4 @@ create new factory in databse/factories
 commands->composer dump-autoload
           php artisan tinker
                             >>>Class_name::factory()->count(500)->create()
-                            this will insert 500 dummy entries into datatbse
+                            this will insert 500 dummy entries into database
