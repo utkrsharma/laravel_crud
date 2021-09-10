@@ -25,3 +25,5 @@ commands->composer dump-autoload
           php artisan tinker
                             >>>Class_name::factory()->count(500)->create()
                             this will insert 500 dummy entries into database
+                            
+9. To migrate a specific table -> create a test folder in migrations folder and copy the new migration in test folder then run this command -> php artisan migrate --path=/database/migrations/test/
